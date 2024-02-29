@@ -34,6 +34,20 @@ export class KeyValuePair {
     }
 }
 
+export class Line {
+    point: Vector2;
+    direction: Vector2;
+}
+
+export class Obstacle {
+	point: Vector2;
+	unitDir: Vector2;
+	isConvex: Boolean;
+	id: Number;
+	prevObstacle: Obstacle;
+	nextObstacle: Obstacle;
+}
+
 export class RVOMath {
     public static RVO_EPSILON: number = 0.01;
 
