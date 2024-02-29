@@ -1,62 +1,66 @@
-function Simulator()
-{
-	this.agents = []; // Agent[]
-	this.obstacles = []; // Obstacle[]
-	this.goals = []; // Vector2
-	this.kdTree = new KdTree();
+import { Obstacle, RVOMath } from "./common";
+import { KdTree } from "./kdtree";
+
+export class Simulator {
+    public static instance: Simulator = null;
+
+	agents = []; // Agent[]
+	obstacles = []; // Obstacle[]
+	goals = []; // Vector2
+	kdTree = new KdTree();
 	
-	this.timeStep = 0.25;
+	timeStep = 0.25;
 	
-    this.defaultAgent; // Agent
-    this.time = 0.0;
+    defaultAgent = null; // Agent
+    time = 0.0;
     
-    this.getGlobalTime = function() {
+    getGlobalTime() {
     	return this.time;
     };
     
-    this.getNumAgents = function() {
+    getNumAgents() {
     	return this.agents.length;
     };
     
-    this.getTimeStep = function() {
+    getTimeStep() {
     	return this.timeStep;
     };
 
-    this.setAgentPrefVelocity = function(i, velocity) {
+    setAgentPrefVelocity(i, velocity) {
         this.agents[i].prefVelocity = velocity;
     };
     
-    this.setTimeStep = function(timeStep)
+    setTimeStep(timeStep)
     {
         this.timeStep = timeStep;
     };
     
-    this.getAgentPosition = function(i)
+    getAgentPosition(i)
     {
         return this.agents[i].position;
     };
     
-    this.getAgentPrefVelocity = function(i)
+    getAgentPrefVelocity(i)
     {
         return this.agents[i].prefVelocity;
     };
     
-    this.getAgentVelocity = function(i)
+    getAgentVelocity(i)
     {
         return this.agents[i].velocity;
     };
     
-    this.getAgentRadius = function(i)
+    getAgentRadius(i)
     {
         return this.agents[i].radius;
     };
     
-    this.getAgentOrcaLines = function(i)
+    getAgentOrcaLines(i)
     {
         return this.agents[i].orcaLines;
     };
 
-    this.addAgent = function(position)
+    addAgent(position)
     {
         if (!this.defaultAgent) {
             throw new Error("no default agent");
@@ -80,7 +84,7 @@ function Simulator()
     };
 
     //  /** float */ neighborDist, /** int */ maxNeighbors, /** float */ timeHorizon, /** float */ timeHorizonObst, /** float */ radius, /** float*/ maxSpeed, /** Vector2 */ velocity)
-    this.setAgentDefaults = function(neighborDist, maxNeighbors, timeHorizon, timeHorizonObst, radius,  maxSpeed, velocity)
+    setAgentDefaults(neighborDist, maxNeighbors, timeHorizon, timeHorizonObst, radius,  maxSpeed, velocity)
     {
         if (!this.defaultAgent)
         {
@@ -96,7 +100,7 @@ function Simulator()
         this.defaultAgent.velocity = velocity;
     }
     
-    this.run = function()
+    run()
     {	
     	this.kdTree.buildAgentTree();
 
@@ -109,7 +113,7 @@ function Simulator()
     	this.time += this.timeStep;
     };
     
-	this.reachedGoal = function()
+	reachedGoal()
 	{
 		for (var i = 0; i < this.getNumAgents (); ++i) {
 			if (RVOMath.absSq (this.goals[i].minus(this.getAgentPosition(i))) > RVOMath.RVO_EPSILON) {
@@ -119,16 +123,16 @@ function Simulator()
 		return true;
 	};
 
-	this.addGoals = function(goals) {
+	addGoals(goals) {
 		this.goals = goals;
 	};
 	
-    this.getGoal = function(goalNo)
+    getGoal(goalNo)
     {
         return this.goals[goalNo];
     };
 	
-    this.addObstacle = function( /** IList<Vector2> */ vertices)
+    addObstacle( /** IList<Vector2> */ vertices)
     {
         if (vertices.length < 2)
         {
@@ -167,17 +171,17 @@ function Simulator()
         return obstacleNo;
     }
 
-    this.processObstacles = function()
+    processObstacles()
     {
         this.kdTree.buildObstacleTree();
     };
 
-    var queryVisibility = function(/** Vector2 */ point1, /** Vector2 */ point2, /** float */ radius)
+    queryVisibility(/** Vector2 */ point1, /** Vector2 */ point2, /** float */ radius)
     {
         return this.kdTree.queryVisibility(point1, point2, radius);
     };
 
-    this.getObstacles = function()
+    getObstacles()
     {
     	return this.obstacles;
     }
