@@ -1,3 +1,4 @@
+import { Agent } from "./agent";
 import { Obstacle, RVOMath } from "./common";
 import { KdTree } from "./kdtree";
 
