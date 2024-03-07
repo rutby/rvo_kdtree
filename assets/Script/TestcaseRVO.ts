@@ -20,18 +20,17 @@ export default class TestcaseRVO extends cc.Component {
     private _agents_d: IAgent[] = [];
     private _agents_n: cc.Node[] = [];
     protected start(): void {
-        let simulator = new Simulator();
-        Simulator.instance = simulator;
-		this.setup(simulator);
+        this.nodeAgent.setContentSize(cc.size(this.radius, this.radius));
 
         /** touch */
         this.node.on(cc.Node.EventType.TOUCH_START, this.onTouchStart, this);
 		this.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this);
 		this.node._touchListener.setSwallowTouches(false);
 		this.node.setContentSize(cc.winSize);
+
+        this.setup();
     }
 
-    
     protected update(dt: number): void {
         if (!Simulator.instance) {
             return;
@@ -64,7 +63,6 @@ export default class TestcaseRVO extends cc.Component {
         for (var i = 0; i < this._agents_d.length; i++) {
             let agent_data = this._agents_d[i];
             var pos = Simulator.instance.getAgentPosition(agent_data.id);
-            var radius = Simulator.instance.getAgentRadius(agent_data.id);
 
             let agent_node = this._agents_n[i];
             agent_node.x = pos.x;
@@ -84,14 +82,20 @@ export default class TestcaseRVO extends cc.Component {
 		}
 		this._touchValid = false;
 
-		console.log('[develop] ========', 'hah');
+        let pos = this.node.convertToNodeSpaceAR(event.getLocation());
+        let pos0 = new Vector2(pos.x, pos.y);
+        let pos1 = pos0.scale(-1);
+        let volocity = RVOMath.normalize(pos1.minus(pos0));
+        this.newAgent(pos0, pos1, volocity);
 	}
 
 
     //================================================ private
-    private setup(simulator: Simulator): void {
-        simulator.setTimeStep(this.speed);
-        simulator.setAgentDefaults(
+    private setup(): void {
+        /** 初始化Simulator */
+        Simulator.instance = new Simulator();
+        Simulator.instance.setTimeStep(this.speed);
+        Simulator.instance.setAgentDefaults(
             400,                // neighbor distance (min = radius * radius)
             30,                 // max neighbors
             600,                // time horizon
@@ -101,7 +105,7 @@ export default class TestcaseRVO extends cc.Component {
             new Vector2(1, 1)   // default velocity
         );
 
-        /** 生成agent */
+        /** 生成Agent */
         this.node.destroyAllChildren();
         this._agents_d = [];
         this._agents_n = [];
@@ -113,13 +117,13 @@ export default class TestcaseRVO extends cc.Component {
             let pos = new Vector2(x,y);
 
             let pos0 = pos;
-            let pos1 = pos.scale(-1);
+            let pos1 = pos0.scale(-1);
             let volocity = RVOMath.normalize(pos1.minus(pos0));
 
             this.newAgent(pos0, pos1, volocity);
         }
 
-        simulator.processObstacles();
+        Simulator.instance.processObstacles();
     }
 
     private newAgent(pos0: Vector2, pos1: Vector2, volocity: Vector2): void {
@@ -141,39 +145,3 @@ export default class TestcaseRVO extends cc.Component {
         agent_data.id = aid;
     }
 }
-
-// //================================================ private
-// 	/** angle a -> b */
-// 	private static _stepAngle(a: number, b: number, c: number): number {
-// 		a = this._0To360(a);
-// 		b = this._0To360(b);
-
-// 		let dir1 = this._isCCW(a, b) ? 1 : -1;
-// 		let d = this._0To360(a + c * dir1);
-// 		let dir2 = this._isCCW(d, b) ? 1 : -1;
-// 		if (dir1 !== dir2) {
-// 			d = b;
-// 		}
-
-// 		d = this._180To180(d);
-// 		return d;
-// 	}
-
-// 	/** 0~360 */
-// 	private static _0To360(angle: number): number {
-// 		angle = angle % 360;
-// 		return angle < 0 ? angle + 360 : angle;
-// 	}
-
-// 	/** -180~180 */
-// 	private static _180To180(angle: number): number {
-// 		return angle > 180 ? angle - 360 : angle;
-// 	}
-
-// 	/** ccw */
-// 	private static _isCCW(from: number, to: number): boolean {
-// 		let diff = to - from;
-//         let cond1 = 180 > diff && diff > 0;
-//         let cond2 = -180 > diff && diff < 0;
-//         return cond1 || cond2;
-// 	}
