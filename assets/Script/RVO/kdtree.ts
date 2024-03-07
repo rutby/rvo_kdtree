@@ -70,17 +70,20 @@ export class KdTree {
 		this.agentTree[node].minX = this.agentTree[node].maxX = this.agents[begin].position.x;
 		this.agentTree[node].minY = this.agentTree[node].maxY = this.agents[begin].position.y;
 		
-		for (var i = begin+1; i<end; ++i) {
+		for (let i = begin + 1; i < end; ++i) {
 			this.agentTree[node].maxX = Math.max(this.agentTree[node].maxX, this.agents[i].position.x);
-			this.agentTree[node].minX = Math.max(this.agentTree[node].minX, this.agents[i].position.x);
-			this.agentTree[node].maxY = Math.max(this.agentTree[node].maxX, this.agents[i].position.y);
-			this.agentTree[node].minY = Math.max(this.agentTree[node].minY, this.agents[i].position.y);
+			this.agentTree[node].minX = Math.min(this.agentTree[node].minX, this.agents[i].position.x);
+			this.agentTree[node].maxY = Math.max(this.agentTree[node].maxY, this.agents[i].position.y);
+			this.agentTree[node].minY = Math.min(this.agentTree[node].minY, this.agents[i].position.y);
 		}
 		
 		if (end - begin > this.MAXLEAF_SIZE) {
-			// no leaf node
-			var isVertical = this.agentTree[node].maxX - this.agentTree[node].minX > this.agentTree[node].maxY - this.agentTree[node].minY;
-			var splitValue = isVertical ? 0.5 * (this.agentTree[node].maxX + this.agentTree[node].minX) : 0.5 * (this.agentTree[node].maxY + this.agentTree[node].minY);
+			/* No leaf node. */
+			let isVertical = this.agentTree[node].maxX - this.agentTree[node].minX > 
+                             this.agentTree[node].maxY - this.agentTree[node].minY;
+			var splitValue = 
+                0.5 * (isVertical ? this.agentTree[node].maxX + this.agentTree[node].minX
+                                  : this.agentTree[node].maxY + this.agentTree[node].minY);
 			
 			var left = begin;
 			var right = end;
@@ -106,15 +109,13 @@ export class KdTree {
                 }
 			}
 			
-			var leftSize = left - begin;
-			if (leftSize == 0) {
-				++leftSize;
+			if (left == begin) {
 				++left;
 				++right;
 			}
 			
 			this.agentTree[node].left = node + 1;
-            this.agentTree[node].right = node + 1 + (2 * leftSize - 1);
+            this.agentTree[node].right = node + 2 * (left - begin);
 
             this.buildAgentTreeRecursive(begin, left, this.agentTree[node].left);
             this.buildAgentTreeRecursive(left, end, this.agentTree[node].right);
