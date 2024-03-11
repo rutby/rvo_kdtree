@@ -68,10 +68,10 @@ export default class TestcaseKdTree extends cc.Component {
         /** ui */
         this.nodeCircle.setPosition(pos);
         for(let agent of this._points) {
-            agent.node.children[0].color = cc.Color.WHITE;
+            agent.node.color = cc.Color.WHITE;
         }
         for(let agent of results) {
-            agent.node.children[0].color = cc.Color.GREEN;
+            agent.node.color = cc.Color.GREEN;
         }
     }
 
