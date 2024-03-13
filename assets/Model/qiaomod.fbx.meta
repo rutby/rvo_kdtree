@@ -1,0 +1,1522 @@
+{
+  "ver": "1.1.3",
+  "uuid": "df52399f-f716-44ad-9ba2-e71616e4af48",
+  "importer": "fbx",
+  "scaleFactor": 1,
+  "boneCount": 0,
+  "precomputeJointMatrix": false,
+  "animationFrameRate": 30,
+  "subMetas": {
+    "buffer.bin": {
+      "ver": "1.0.2",
+      "uuid": "c9abd719-7d84-4169-926d-511948797cb0",
+      "importer": "buffer",
+      "name": "buffer.bin",
+      "subMetas": {}
+    },
+    "pCube31.mesh": {
+      "ver": "1.0.3",
+      "uuid": "5f065223-9db0-4ac9-bd81-db612e2cd2ba",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0319999977946281,
+        "y": -0.00137950479984283,
+        "z": -0.00260781403630972
+      },
+      "maxPos": {
+        "x": 0.0319999977946281,
+        "y": 0.00499999988824129,
+        "z": 0.0124802095815539
+      },
+      "name": "pCube31.mesh",
+      "subMetas": {}
+    },
+    "pCube32.mesh": {
+      "ver": "1.0.3",
+      "uuid": "05826371-0d8c-405e-aca4-09ebe9b02298",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0320534221827984,
+        "y": -0.00101948785595596,
+        "z": -0.0177807416766882
+      },
+      "maxPos": {
+        "x": 0.0319465734064579,
+        "y": 0.00536001659929752,
+        "z": -0.00298897549510002
+      },
+      "name": "pCube32.mesh",
+      "subMetas": {}
+    },
+    "pCube39.mesh": {
+      "ver": "1.0.3",
+      "uuid": "50306f87-d7b6-48b9-950b-0765e5f72874",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0319999977946281,
+        "y": -0.000668649387080222,
+        "z": 0.0128327710554004
+      },
+      "maxPos": {
+        "x": 0.0319999977946281,
+        "y": 0.00571085559204221,
+        "z": 0.0269198417663574
+      },
+      "name": "pCube39.mesh",
+      "subMetas": {}
+    },
+    "pCube40.mesh": {
+      "ver": "1.0.3",
+      "uuid": "618acfcf-c056-46ef-9241-4f68b01a049a",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0269952341914177,
+        "y": -0.000592093158047646,
+        "z": 0.0275859422981739
+      },
+      "maxPos": {
+        "x": 0.0370047613978386,
+        "y": 0.00578741170465946,
+        "z": 0.0424998886883259
+      },
+      "name": "pCube40.mesh",
+      "subMetas": {}
+    },
+    "pCube41.mesh": {
+      "ver": "1.0.3",
+      "uuid": "a78b9e3c-013d-44e9-bcf3-0fb127232be5",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.034513883292675,
+        "y": 0.000191321669262834,
+        "z": 0.0426743887364864
+      },
+      "maxPos": {
+        "x": 0.0270310398191214,
+        "y": 0.00657082675024867,
+        "z": 0.0548775270581245
+      },
+      "name": "pCube41.mesh",
+      "subMetas": {}
+    },
+    "pCube42.mesh": {
+      "ver": "1.0.3",
+      "uuid": "bf315ffe-a5af-4cf7-a7de-52c773c744cd",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0318567268550396,
+        "y": -0.000790456193499267,
+        "z": 0.0555281676352024
+      },
+      "maxPos": {
+        "x": 0.0336739309132099,
+        "y": 0.00558904884383082,
+        "z": 0.066485770046711
+      },
+      "name": "pCube42.mesh",
+      "subMetas": {}
+    },
+    "pCube44.mesh": {
+      "ver": "1.0.3",
+      "uuid": "89c55d56-bb61-46cd-bdab-5aa282c15b1d",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0289605595171452,
+        "y": -0.000120159980724566,
+        "z": 0.0770699754357338
+      },
+      "maxPos": {
+        "x": 0.0308700557798147,
+        "y": 0.00625934451818466,
+        "z": 0.0888345018029213
+      },
+      "name": "pCube44.mesh",
+      "subMetas": {}
+    },
+    "_pHelix2.mesh": {
+      "ver": "1.0.3",
+      "uuid": "08e38405-da2f-40bf-8d9e-1239c3690184",
+      "importer": "mesh",
+      "verts": 46,
+      "tris": 62,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0259408801794052,
+        "y": 0.00537513010203838,
+        "z": 0.0878945887088776
+      },
+      "maxPos": {
+        "x": 0.0398758575320244,
+        "y": 0.0149092487990856,
+        "z": 0.102374896407127
+      },
+      "name": "_pHelix2.mesh",
+      "subMetas": {}
+    },
+    "_pHelix3.mesh": {
+      "ver": "1.0.3",
+      "uuid": "837d2f47-4890-4b16-8f83-aed95ab9310a",
+      "importer": "mesh",
+      "verts": 46,
+      "tris": 62,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0398758538067341,
+        "y": 0.00537513010203838,
+        "z": 0.0878945887088776
+      },
+      "maxPos": {
+        "x": -0.0259408745914698,
+        "y": 0.0149092487990856,
+        "z": 0.102374896407127
+      },
+      "name": "_pHelix3.mesh",
+      "subMetas": {}
+    },
+    "pCylinder3.mesh": {
+      "ver": "1.0.3",
+      "uuid": "6b34af1b-7162-4925-80ce-5af9c49851a4",
+      "importer": "mesh",
+      "verts": 33,
+      "tris": 30,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.038541667163372,
+        "y": -0.00869466736912727,
+        "z": 0.0897771418094635
+      },
+      "maxPos": {
+        "x": -0.0272750686854124,
+        "y": 0.0183218587189913,
+        "z": 0.1004923209548
+      },
+      "name": "pCylinder3.mesh",
+      "subMetas": {}
+    },
+    "pCylinder4.mesh": {
+      "ver": "1.0.3",
+      "uuid": "cc8b82e2-667d-4c12-9c05-5beb75ced909",
+      "importer": "mesh",
+      "verts": 33,
+      "tris": 30,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0272750686854124,
+        "y": -0.00869466736912727,
+        "z": 0.0897771418094635
+      },
+      "maxPos": {
+        "x": 0.038541667163372,
+        "y": 0.0183218587189913,
+        "z": 0.1004923209548
+      },
+      "name": "pCylinder4.mesh",
+      "subMetas": {}
+    },
+    "pCube74.mesh": {
+      "ver": "1.0.3",
+      "uuid": "ca58c863-8595-4e0a-8dcb-a948cd0b69c7",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0250589158385992,
+        "y": 0.00485093798488379,
+        "z": 0.0392761304974556
+      },
+      "maxPos": {
+        "x": -0.022662216797471,
+        "y": 0.0068714702501893,
+        "z": 0.045775581151247
+      },
+      "name": "pCube74.mesh",
+      "subMetas": {}
+    },
+    "pCube75.mesh": {
+      "ver": "1.0.3",
+      "uuid": "ff82bc83-40df-468b-abf8-4cfdaa45c41b",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0249797776341438,
+        "y": 0.00485093798488379,
+        "z": 0.0253228470683098
+      },
+      "maxPos": {
+        "x": -0.0225830785930157,
+        "y": 0.0068714702501893,
+        "z": 0.0318222939968109
+      },
+      "name": "pCube75.mesh",
+      "subMetas": {}
+    },
+    "pCube76.mesh": {
+      "ver": "1.0.3",
+      "uuid": "1d07e660-0d99-4854-b79e-aefc257b0516",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0269552692770958,
+        "y": 0.00326573732309043,
+        "z": -0.0215364396572113
+      },
+      "maxPos": {
+        "x": -0.0245585720986128,
+        "y": 0.0066141514107585,
+        "z": -0.0147567838430405
+      },
+      "name": "pCube76.mesh",
+      "subMetas": {}
+    },
+    "pCube77.mesh": {
+      "ver": "1.0.3",
+      "uuid": "5c3757e1-4bae-4cb2-9686-2b5559e61876",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0269552692770958,
+        "y": 0.00485093798488379,
+        "z": -0.00634329300373793
+      },
+      "maxPos": {
+        "x": -0.0245585720986128,
+        "y": 0.0068714702501893,
+        "z": 0.000156154623255134
+      },
+      "name": "pCube77.mesh",
+      "subMetas": {}
+    },
+    "pCube78.mesh": {
+      "ver": "1.0.3",
+      "uuid": "60bcc159-b984-4b7a-b8db-e44d9756d379",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0276450905948877,
+        "y": 0.00390932196751237,
+        "z": -0.0882562398910522
+      },
+      "maxPos": {
+        "x": -0.0252483934164047,
+        "y": 0.00781308673322201,
+        "z": -0.0814501941204071
+      },
+      "name": "pCube78.mesh",
+      "subMetas": {}
+    },
+    "pCube79.mesh": {
+      "ver": "1.0.3",
+      "uuid": "baa9068b-59f7-42ba-8779-9e422ba3e72d",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0269552692770958,
+        "y": 0.00299711991101503,
+        "z": -0.031037125736475
+      },
+      "maxPos": {
+        "x": -0.0245585720986128,
+        "y": 0.00501765171065927,
+        "z": -0.0245376769453287
+      },
+      "name": "pCube79.mesh",
+      "subMetas": {}
+    },
+    "pCube80.mesh": {
+      "ver": "1.0.3",
+      "uuid": "02889963-2cbf-4886-aa2a-ccd76977540e",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0260531213134527,
+        "y": 0.00564877968281507,
+        "z": 0.0742321163415909
+      },
+      "maxPos": {
+        "x": -0.0236564222723246,
+        "y": 0.00766931148245931,
+        "z": 0.080731563270092
+      },
+      "name": "pCube80.mesh",
+      "subMetas": {}
+    },
+    "pCube81.mesh": {
+      "ver": "1.0.3",
+      "uuid": "31b467a1-7e2e-4300-ba29-892480395cd0",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0269552692770958,
+        "y": 0.00485093798488379,
+        "z": 0.00950152892619371
+      },
+      "maxPos": {
+        "x": -0.0245585720986128,
+        "y": 0.0068714702501893,
+        "z": 0.0160009767860174
+      },
+      "name": "pCube81.mesh",
+      "subMetas": {}
+    },
+    "pCube82.mesh": {
+      "ver": "1.0.3",
+      "uuid": "c40ca231-e91b-46d6-b76e-e88a56f9f9fc",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0276450905948877,
+        "y": 0.00391447125002742,
+        "z": -0.0712321475148201
+      },
+      "maxPos": {
+        "x": -0.0252483934164047,
+        "y": 0.00736423302441835,
+        "z": -0.0644431561231613
+      },
+      "name": "pCube82.mesh",
+      "subMetas": {}
+    },
+    "pCube83.mesh": {
+      "ver": "1.0.3",
+      "uuid": "36bdc35b-ca1e-4404-9bd0-6460a762b8b7",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0260895229876041,
+        "y": 0.00436446396633983,
+        "z": 0.086160235106945
+      },
+      "maxPos": {
+        "x": -0.0236200205981731,
+        "y": 0.00764828687533736,
+        "z": 0.092948317527771
+      },
+      "name": "pCube83.mesh",
+      "subMetas": {}
+    },
+    "pCube84.mesh": {
+      "ver": "1.0.3",
+      "uuid": "31ae3a5d-f416-4241-904a-46ea4a5a3e8e",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0274185668677092,
+        "y": 0.00485093798488379,
+        "z": 0.0530826188623905
+      },
+      "maxPos": {
+        "x": -0.0250218696892262,
+        "y": 0.0068714702501893,
+        "z": 0.0595820620656013
+      },
+      "name": "pCube84.mesh",
+      "subMetas": {}
+    },
+    "pCube85.mesh": {
+      "ver": "1.0.3",
+      "uuid": "e8900bca-debc-4897-baa6-bf8c978c572f",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0269552692770958,
+        "y": 0.0033715998288244,
+        "z": -0.0576051734387875
+      },
+      "maxPos": {
+        "x": -0.0245585720986128,
+        "y": 0.00539213186129928,
+        "z": -0.0511057265102863
+      },
+      "name": "pCube85.mesh",
+      "subMetas": {}
+    },
+    "pCube86.mesh": {
+      "ver": "1.0.3",
+      "uuid": "1047c3b1-8bf7-4f6c-ae0b-47bb5cc9c4b8",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0260531213134527,
+        "y": 0.00462630670517683,
+        "z": 0.0633675754070282
+      },
+      "maxPos": {
+        "x": -0.0236564222723246,
+        "y": 0.00770967593416572,
+        "z": 0.0701140463352203
+      },
+      "name": "pCube86.mesh",
+      "subMetas": {}
+    },
+    "pCube87.mesh": {
+      "ver": "1.0.3",
+      "uuid": "6f5dfb6b-15fc-4cf9-b7da-535d9b30acf2",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0274649001657963,
+        "y": 0.00345935462974012,
+        "z": -0.0454289577901363
+      },
+      "maxPos": {
+        "x": -0.0250682011246681,
+        "y": 0.00547988619655371,
+        "z": -0.0389295108616352
+      },
+      "name": "pCube87.mesh",
+      "subMetas": {}
+    },
+    "pCube74_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "fa5f3ddb-7751-4290-b9f5-53209dbfc04d",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0231023002415895,
+        "y": 0.00426399894058704,
+        "z": 0.0380905084311962
+      },
+      "maxPos": {
+        "x": 0.0292628314346075,
+        "y": 0.00745840929448605,
+        "z": 0.04476572945714
+      },
+      "name": "pCube74_1.mesh",
+      "subMetas": {}
+    },
+    "pCube75_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "791b0d27-f6e9-41b6-90a5-4ad4f6a4eef4",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0234710369259119,
+        "y": 0.00485093798488379,
+        "z": 0.0246418379247189
+      },
+      "maxPos": {
+        "x": 0.0294050518423319,
+        "y": 0.0068714702501893,
+        "z": 0.0312128253281116
+      },
+      "name": "pCube75_1.mesh",
+      "subMetas": {}
+    },
+    "pCube76_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "ada32f17-bb45-493b-ab9c-848e46fbae69",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0245585702359676,
+        "y": 0.00326573732309043,
+        "z": -0.0215364396572113
+      },
+      "maxPos": {
+        "x": 0.0269552674144506,
+        "y": 0.0066141514107585,
+        "z": -0.0147567838430405
+      },
+      "name": "pCube76_1.mesh",
+      "subMetas": {}
+    },
+    "pCube77_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "7c897ced-798f-47b6-92e9-85992cce2aa5",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0245585702359676,
+        "y": 0.00485093798488379,
+        "z": -0.00634329300373793
+      },
+      "maxPos": {
+        "x": 0.0269552674144506,
+        "y": 0.0068714702501893,
+        "z": 0.000156154623255134
+      },
+      "name": "pCube77_1.mesh",
+      "subMetas": {}
+    },
+    "pCube78_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "b06a3653-cc82-46a9-8d6e-0427b9a84a40",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0252483915537596,
+        "y": 0.00390932196751237,
+        "z": -0.0882562398910522
+      },
+      "maxPos": {
+        "x": 0.0276450887322426,
+        "y": 0.00781308673322201,
+        "z": -0.0814501941204071
+      },
+      "name": "pCube78_1.mesh",
+      "subMetas": {}
+    },
+    "pCube79_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "bfb389f6-0916-44d3-ad28-905eaa46f786",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0245585702359676,
+        "y": 0.00299711991101503,
+        "z": -0.031037125736475
+      },
+      "maxPos": {
+        "x": 0.0269552674144506,
+        "y": 0.00501765171065927,
+        "z": -0.0245376769453287
+      },
+      "name": "pCube79_1.mesh",
+      "subMetas": {}
+    },
+    "pCube80_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "bb3c522e-9f8e-4233-bdc9-ccdc289cdfd8",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0236564222723246,
+        "y": 0.00564877968281507,
+        "z": 0.0742321163415909
+      },
+      "maxPos": {
+        "x": 0.0260531213134527,
+        "y": 0.00766931148245931,
+        "z": 0.080731563270092
+      },
+      "name": "pCube80_1.mesh",
+      "subMetas": {}
+    },
+    "pCube81_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "631811be-0e33-4867-bb95-b639a49461f4",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0245585702359676,
+        "y": 0.00485093798488379,
+        "z": 0.00950152892619371
+      },
+      "maxPos": {
+        "x": 0.0269552674144506,
+        "y": 0.0068714702501893,
+        "z": 0.0160009767860174
+      },
+      "name": "pCube81_1.mesh",
+      "subMetas": {}
+    },
+    "pCube82_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "b5557857-eb7d-45d0-8f36-70a38b61533f",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0252483915537596,
+        "y": 0.00391447125002742,
+        "z": -0.0712321475148201
+      },
+      "maxPos": {
+        "x": 0.0276450887322426,
+        "y": 0.00736423302441835,
+        "z": -0.0644431561231613
+      },
+      "name": "pCube82_1.mesh",
+      "subMetas": {}
+    },
+    "pCube83_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "78e877f5-c327-42ec-afbe-1a53220a6e83",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0236200205981731,
+        "y": 0.00436446396633983,
+        "z": 0.086160235106945
+      },
+      "maxPos": {
+        "x": 0.0260895229876041,
+        "y": 0.00764828687533736,
+        "z": 0.092948317527771
+      },
+      "name": "pCube83_1.mesh",
+      "subMetas": {}
+    },
+    "pCube84_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "382a600d-a496-44b3-8210-79703ea3f259",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0223799590021372,
+        "y": 0.00485093798488379,
+        "z": 0.0530826188623905
+      },
+      "maxPos": {
+        "x": 0.0247766561806202,
+        "y": 0.0068714702501893,
+        "z": 0.0595820620656013
+      },
+      "name": "pCube84_1.mesh",
+      "subMetas": {}
+    },
+    "pCube85_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "e3d8ac39-3a9a-4d16-9432-f90ff58e899e",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0250000692903996,
+        "y": 0.0033715998288244,
+        "z": -0.0578728057444096
+      },
+      "maxPos": {
+        "x": 0.0313333347439766,
+        "y": 0.00539213186129928,
+        "z": -0.0516264326870441
+      },
+      "name": "pCube85_1.mesh",
+      "subMetas": {}
+    },
+    "pCube86_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "b70f206a-84df-49cd-9eeb-650f8ee8aa88",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0236564222723246,
+        "y": 0.00462630670517683,
+        "z": 0.0633675754070282
+      },
+      "maxPos": {
+        "x": 0.0260531213134527,
+        "y": 0.00770967593416572,
+        "z": 0.0701140463352203
+      },
+      "name": "pCube86_1.mesh",
+      "subMetas": {}
+    },
+    "pCube87_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "13b6ec93-3c18-4733-83e5-e62b52b51953",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0263047330081463,
+        "y": 0.00345935462974012,
+        "z": -0.0461015366017818
+      },
+      "maxPos": {
+        "x": 0.0324330814182758,
+        "y": 0.00547988619655371,
+        "z": -0.0396664328873158
+      },
+      "name": "pCube87_1.mesh",
+      "subMetas": {}
+    },
+    "pCube43.mesh": {
+      "ver": "1.0.3",
+      "uuid": "de15898d-7cfc-4526-930f-129630074b14",
+      "importer": "mesh",
+      "verts": 25,
+      "tris": 13,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0289605539292097,
+        "y": 0.000414070789702237,
+        "z": 0.0665472894906998
+      },
+      "maxPos": {
+        "x": 0.0302784144878387,
+        "y": 0.00679357536137104,
+        "z": 0.0767059475183487
+      },
+      "name": "pCube43.mesh",
+      "subMetas": {}
+    },
+    "pCube88.mesh": {
+      "ver": "1.0.3",
+      "uuid": "152895ea-d236-4fb3-9106-fcefc0123e7d",
+      "importer": "mesh",
+      "verts": 25,
+      "tris": 13,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0312424264848232,
+        "y": -0.00134461047127843,
+        "z": -0.0544487163424492
+      },
+      "maxPos": {
+        "x": 0.0416244454681873,
+        "y": 0.0050348942168057,
+        "z": -0.0426817685365677
+      },
+      "name": "pCube88.mesh",
+      "subMetas": {}
+    },
+    "pCube89.mesh": {
+      "ver": "1.0.3",
+      "uuid": "928ac8dd-0f4e-4be2-a300-7db8c07598aa",
+      "importer": "mesh",
+      "verts": 25,
+      "tris": 13,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0312424246221781,
+        "y": 0.0000801193673396483,
+        "z": -0.084391325712204
+      },
+      "maxPos": {
+        "x": 0.0307241249829531,
+        "y": 0.00645962357521057,
+        "z": -0.0688169822096825
+      },
+      "name": "pCube89.mesh",
+      "subMetas": {}
+    },
+    "pCube34.mesh": {
+      "ver": "1.0.3",
+      "uuid": "a4b7a064-b5b7-43dd-be9d-56abe3d829b3",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0287449024617672,
+        "y": -0.00191194424405694,
+        "z": -0.041865810751915
+      },
+      "maxPos": {
+        "x": 0.0363237634301186,
+        "y": 0.00446756044402719,
+        "z": -0.0298848059028387
+      },
+      "name": "pCube34.mesh",
+      "subMetas": {}
+    },
+    "pCube90.mesh": {
+      "ver": "1.0.3",
+      "uuid": "8de7cbd3-9bb3-47f0-adb3-18e8cccb2668",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0362469740211964,
+        "y": -0.00154051627032459,
+        "z": -0.0677856057882309
+      },
+      "maxPos": {
+        "x": 0.0288216918706894,
+        "y": 0.00483898865059018,
+        "z": -0.0551831126213074
+      },
+      "name": "pCube90.mesh",
+      "subMetas": {}
+    },
+    "pCube92.mesh": {
+      "ver": "1.0.3",
+      "uuid": "88dc5072-743d-4198-a05a-14332ded95d6",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0316976122558117,
+        "y": -0.00137950479984283,
+        "z": -0.0971741676330566
+      },
+      "maxPos": {
+        "x": 0.0308700557798147,
+        "y": 0.00499999988824129,
+        "z": -0.0851540639996529
+      },
+      "name": "pCube92.mesh",
+      "subMetas": {}
+    },
+    "pCube93.mesh": {
+      "ver": "1.0.3",
+      "uuid": "636d4b31-c9f8-425b-8c26-67959d716be6",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0312817692756653,
+        "y": -0.00214359792880714,
+        "z": -0.0291750095784664
+      },
+      "maxPos": {
+        "x": 0.0312256775796413,
+        "y": 0.00423590699210763,
+        "z": -0.0184010155498981
+      },
+      "name": "pCube93.mesh",
+      "subMetas": {}
+    },
+    "pCube94.mesh": {
+      "ver": "1.0.3",
+      "uuid": "e0cc02b2-cb55-4572-8d13-c1c63e0cc3a3",
+      "importer": "mesh",
+      "verts": 20,
+      "tris": 10,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0289273802191019,
+        "y": -0.00137950479984283,
+        "z": 0.0892611518502235
+      },
+      "maxPos": {
+        "x": 0.0308700557798147,
+        "y": 0.00499999988824129,
+        "z": 0.101022057235241
+      },
+      "name": "pCube94.mesh",
+      "subMetas": {}
+    },
+    "_pHelix2_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "5013731a-19fb-4e3c-8f7e-ca37136ded91",
+      "importer": "mesh",
+      "verts": 46,
+      "tris": 62,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0259408801794052,
+        "y": 0.00537513010203838,
+        "z": -0.0975780636072159
+      },
+      "maxPos": {
+        "x": 0.0398758575320244,
+        "y": 0.0149092487990856,
+        "z": -0.0830977633595467
+      },
+      "name": "_pHelix2_1.mesh",
+      "subMetas": {}
+    },
+    "pCylinder2.mesh": {
+      "ver": "1.0.3",
+      "uuid": "da2f2dc3-1f58-42de-a70f-0a945bfa7b9a",
+      "importer": "mesh",
+      "verts": 33,
+      "tris": 30,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": 0.0272750686854124,
+        "y": -0.00869466736912727,
+        "z": -0.0956955105066299
+      },
+      "maxPos": {
+        "x": 0.038541667163372,
+        "y": 0.0183218587189913,
+        "z": -0.0849803313612938
+      },
+      "name": "pCylinder2.mesh",
+      "subMetas": {}
+    },
+    "_pHelix3_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "583b39fe-24a4-4838-9cb7-e98d7848bbbc",
+      "importer": "mesh",
+      "verts": 46,
+      "tris": 62,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0398758538067341,
+        "y": 0.00537513010203838,
+        "z": -0.0975780636072159
+      },
+      "maxPos": {
+        "x": -0.0259408745914698,
+        "y": 0.0149092487990856,
+        "z": -0.0830977633595467
+      },
+      "name": "_pHelix3_1.mesh",
+      "subMetas": {}
+    },
+    "pCylinder3_1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "88b1bb56-372a-4d64-a270-cf296d05e4c3",
+      "importer": "mesh",
+      "verts": 33,
+      "tris": 30,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.038541667163372,
+        "y": -0.00869466736912727,
+        "z": -0.0956955105066299
+      },
+      "maxPos": {
+        "x": -0.0272750686854124,
+        "y": 0.0183218587189913,
+        "z": -0.0849803313612938
+      },
+      "name": "pCylinder3_1.mesh",
+      "subMetas": {}
+    },
+    "qiaomod.prefab": {
+      "ver": "1.3.2",
+      "uuid": "a9e9474e-17dc-4e83-957e-4f39c2452dac",
+      "importer": "prefab",
+      "optimizationPolicy": "AUTO",
+      "asyncLoadAssets": false,
+      "readonly": true,
+      "content": [
+        {
+          "__type__": "cc.Prefab",
+          "_name": "",
+          "_objFlags": 0,
+          "data": {
+            "__id__": 1
+          }
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Sprite",
+          "_objFlags": 0,
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_cascadeOpacityEnabled": true,
+          "_parent": null,
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 40,
+            "height": 36
+          },
+          "_children": [],
+          "_skewX": 0,
+          "_skewY": 0,
+          "_localZOrder": 0,
+          "_globalZOrder": 0,
+          "_tag": -1,
+          "_opacityModifyRGB": false,
+          "_reorderChildDirty": false,
+          "_id": "",
+          "_active": true,
+          "_components": [
+            {
+              "__id__": 2
+            }
+          ],
+          "_prefab": {
+            "__id__": 3
+          },
+          "_eulerAngles": {
+            "__type__": "cc.Vec3",
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "_trs": {
+            "__type__": "TypedArray",
+            "ctor": "Float64Array",
+            "array": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "__type__": "cc.Sprite",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 1
+          },
+          "_enabled": true,
+          "_spriteFrame": {
+            "__uuid__": "8cdb44ac-a3f6-449f-b354-7cd48cf84061"
+          },
+          "_type": 0,
+          "_sizeMode": 1,
+          "_fillType": 0,
+          "_fillCenter": {
+            "__type__": "cc.Vec2",
+            "x": 0,
+            "y": 0
+          },
+          "_fillStart": 0,
+          "_fillRange": 0,
+          "_isTrimmedMode": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_atlas": null
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": null,
+          "fileId": "d7118yAG5lKybkFOAh8koPL"
+        }
+      ],
+      "name": "qiaomod.prefab",
+      "subMetas": {}
+    },
+    "lambert1.mtl": {
+      "ver": "1.0.5",
+      "uuid": "11bfc5a0-6776-4e79-9153-b87bd240f8cb",
+      "importer": "material",
+      "dataAsSubAsset": "{\n  \"__type__\": \"cc.Material\",\n  \"_name\": \"\",\n  \"_objFlags\": 0,\n  \"_native\": \"\",\n  \"_effectAsset\": {\n    \"__uuid__\": \"6d91e591-4ce0-465c-809f-610ec95019c6\"\n  },\n  \"_techniqueIndex\": 0,\n  \"_techniqueData\": {\n    \"0\": {\n      \"props\": {\n        \"diffuseColor\": {\n          \"__type__\": \"cc.Color\",\n          \"r\": 255,\n          \"g\": 255,\n          \"b\": 255,\n          \"a\": 255\n        },\n        \"diffuseTexture\": {\n          \"__uuid__\": \"eeee954b-69be-4f77-a56f-a1d81c44e9b6\"\n        }\n      },\n      \"defines\": {\n        \"USE_DIFFUSE_TEXTURE\": true\n      }\n    }\n  }\n}",
+      "name": "lambert1.mtl",
+      "subMetas": {}
+    }
+  }
+}

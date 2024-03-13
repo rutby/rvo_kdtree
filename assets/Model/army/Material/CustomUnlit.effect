@@ -1,0 +1,80 @@
+// Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+
+CCEffect %{
+  techniques:
+  - name: default
+    passes:
+    - vert: vs
+      frag: fs
+      depthStencilState:
+        depthTest: true
+        depthWrite: true
+      blendState:
+        targets:
+        - blend: true
+      rasterizerState:
+        cullMode: none
+      properties:
+        diffuseTexture: { value: white }
+}%
+
+CCProgram vs %{
+	precision highp float;
+
+	#include <cc-local>
+    #include <cc-global>
+    #include <input-standard>
+
+// #if CC_USE_GPU_INSTACING
+    in vec4 a_matWorld0;
+    in vec4 a_matWorld1;
+    in vec4 a_matWorld2;
+    in vec4 a_matWorld3;
+// #endif
+    out mediump vec2 v_uv0;
+
+    void main () {
+        StandardVertInput In;
+        CCVertInput(In);
+
+        v_uv0 = In.uv;
+
+// #if CC_USE_GPU_INSTACING
+        mat4 matWorld = mat4(
+            vec4(a_matWorld0),
+            vec4(a_matWorld1),
+            vec4(a_matWorld2),
+            vec4(a_matWorld3)
+            // 1., 0., 0., 0.0,
+            // 0., 1., 0., 0.0,
+            // 0., 0., 1., 0.0,
+            // a_matWorld3.x, 570.5, 0., 1.0
+        );
+
+        // gl_Position = cc_matViewProj * cc_matWorld * (In.position + a_matWorld0 + a_matWorld1 + a_matWorld2);
+        gl_Position = cc_matViewProj * cc_matWorld * matWorld * In.position;
+// #else
+//         gl_Position = cc_matViewProj * cc_matWorld * In.position;
+// #endif 
+    }
+}%
+
+
+CCProgram fs %{
+	precision highp float;
+
+	#include <texture>
+    #include <output>
+    #include <cc-global>
+    #include <cc-local>
+
+	in vec2 v_uv0;
+	uniform sampler2D diffuseTexture;
+
+	void main () {
+        vec4 o = vec4(1, 1, 1, 1);
+        o = texture(diffuseTexture, v_uv0);
+
+		gl_FragColor = o;
+  	}
+}%

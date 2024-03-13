@@ -1,0 +1,20 @@
+{
+  "__type__": "cc.Material",
+  "_name": "CustomUnlit",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "7851fd69-ff90-4161-96e5-9a9bd37f7c08"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {},
+      "props": {
+        "diffuseTexture": {
+          "__uuid__": "1107539b-d982-484d-86e7-35d5ee8ac714"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "67e4a7ab-53c2-4ae1-a30b-979b441c9c6b",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "repeat",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": false,
+  "width": 256,
+  "height": 256,
+  "platformSettings": {},
+  "subMetas": {
+    "Particle_Water_Trail_02": {
+      "ver": "1.0.6",
+      "uuid": "5d0040a0-9f4f-4511-a63b-f27a73a15664",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "67e4a7ab-53c2-4ae1-a30b-979b441c9c6b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 256,
+      "height": 256,
+      "rawWidth": 256,
+      "rawHeight": 256,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

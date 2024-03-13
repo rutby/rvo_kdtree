@@ -15,9 +15,7 @@
         }
       },
       "defines": {
-        "USE_DIFFUSE_TEXTURE": true,
-        "OUTPUT_TO_GAMMA": true,
-        "INPUT_IS_GAMMA": true
+        "USE_DIFFUSE_TEXTURE": true
       }
     }
   }

@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.Material",
+  "_name": "River",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "3e19e360-01bd-4292-b920-6e0596718064"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {},
+      "props": {
+        "diffuseTexture0": {
+          "__uuid__": "a34c56fc-34a1-4c65-9e25-e8a8d92f23f1"
+        },
+        "diffuseTexture2": {
+          "__uuid__": "acb9a120-2bf0-4e54-9e48-95490a8b5f96"
+        },
+        "speed0": 0.1,
+        "speed1": 0.2,
+        "speed2": 0.3,
+        "diffuseTexture1": {
+          "__uuid__": "acb9a120-2bf0-4e54-9e48-95490a8b5f96"
+        }
+      }
+    }
+  }
+}

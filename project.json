@@ -1,7 +1,7 @@
 {
   "engine": "cocos2d-html5",
   "packages": "packages",
-  "version": "2.4.6",
+  "version": "2.4.8",
   "name": "rvo",
   "id": "5ceaeb98-1ff7-4daf-a53f-64dee62c2978",
   "isNew": false

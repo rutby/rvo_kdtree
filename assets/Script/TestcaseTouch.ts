@@ -77,8 +77,8 @@ export default class TestcaseTouch extends cc.Component {
         }
         this._touchValid = false;
 
-        // let posOnPlane = this.getScreenPosOnPlaneXY(event.getLocation());
-        // console.log('[develop] ========', posOnPlane.x, posOnPlane.y, posOnPlane.z);
+        let posOnPlane = this.getScreenPosOnPlaneXY(event.getLocation());
+        console.log('[develop] ========', posOnPlane.x, posOnPlane.y, posOnPlane.z);
     }
 
     //================================================ private
@@ -90,7 +90,7 @@ export default class TestcaseTouch extends cc.Component {
         cc.Vec3.set(this._vec_temp0, 0, 0, -1);
         let vecA = this._vec_temp0;
         let scaler = (camera.node.z - z) / vecC.dot(vecA);
-        !ignoreCamera && vecC.multiplyScalar(scaler);
+        vecC.multiplyScalar(scaler);
         return vecC.add(camera.node.position);
     }
 }
