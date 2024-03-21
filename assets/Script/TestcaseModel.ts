@@ -70,9 +70,11 @@ export default class TestcaseModel extends cc.Component {
 
             
             // let nodeMaterial = node.children[0].children[0].children[0].children[0];
-            let nodeMaterial = node;
-            let material = nodeMaterial.getComponent(cc.MeshRenderer).getMaterial(0);
-            material.useGPUInstancing = this.useGPUInstancing;
+            if (this.useGPUInstancing) {
+                let nodeMaterial = node;
+                let material = nodeMaterial.getComponent(cc.MeshRenderer).getMaterial(0);
+                material.useGPUInstancing = true;
+            }
 
             this._nodeUnits.push(node);
             this._posUnits.push(pos);
