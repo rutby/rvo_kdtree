@@ -1,0 +1,19 @@
+{
+  "__type__": "cc.Material",
+  "_name": "BakedAnimation",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "3d65bc83-cc19-47dc-909b-a1c42626ee77"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "props": {
+        "diffuseTexture": {
+          "__uuid__": "0e9df65b-8934-4081-bc7d-52410ea5a8fd"
+        }
+      }
+    }
+  }
+}
