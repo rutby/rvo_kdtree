@@ -3,18 +3,21 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class BakedSkeletonAnimation extends cc.Component {
     @property([cc.SkeletonAnimationClip]) clips: cc.SkeletonAnimationClip[] = [];
+    @property(cc.Model) model: cc.Model = null;
+    @property(cc.Boolean) baked: boolean = false;
 
     private _ratios: number[] = [];
     private _pairs: {target: cc.Node, values: any[]}[] = [];
 
     protected start(): void {
         for(let clip of this.clips) {
+            clip._model = this.model;
             let data = clip.createCurves(null, this.node);
 
             this._ratios = data[0].ratios;
             this._pairs = data[0].pairs;
 
-            this.extendCurve();
+            // this.extendCurve();
             this._duration = clip.duration;
             break;
         }
