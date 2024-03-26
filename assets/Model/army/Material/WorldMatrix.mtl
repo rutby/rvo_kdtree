@@ -1,0 +1,24 @@
+{
+  "__type__": "cc.Material",
+  "_name": "WorldMatrix",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "50240c9e-10d2-4a12-bcd4-487b37c32a61"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {},
+      "props": {
+        "diffuseColor": {
+          "__type__": "cc.Color",
+          "r": 127,
+          "g": 127,
+          "b": 127,
+          "a": 255
+        }
+      }
+    }
+  }
+}

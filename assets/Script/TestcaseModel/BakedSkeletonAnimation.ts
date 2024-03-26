@@ -8,6 +8,9 @@ export default class BakedSkeletonAnimation extends cc.Component {
 
     private _ratios: number[] = [];
     private _pairs: {target: cc.Node, values: any[]}[] = [];
+    private _material: cc.Material = null;
+
+
 
     protected start(): void {
         for(let clip of this.clips) {
@@ -20,6 +23,44 @@ export default class BakedSkeletonAnimation extends cc.Component {
             // this.extendCurve();
             this._duration = clip.duration;
             break;
+        }
+
+        this._material = this.getComponent(cc.MeshRenderer).getMaterials()[0];
+
+        //================================================ 创建纹理
+        let width = this._ratios.length;
+        let height = this._pairs.length;
+        
+        let texture = new cc.Texture2D();
+        let NEAREST = cc.Texture2D.Filter.NEAREST;
+        texture.setFilters(NEAREST, NEAREST);
+
+        let pixelFormat = cc.Texture2D.PixelFormat.RGBA8888;
+        let jointsData = new Uint8Array(width * height * 4);
+        texture.initWithData(jointsData, pixelFormat, width, height);
+
+        let jointsTexture = texture;
+        this._material.setProperty('jointsTexture', jointsTexture);
+
+        //================================================ 写入纹理
+        // let buffer = new Uint8Array(16);
+        // for(let frame = 0; frame < width; frame++) {
+        //     for(let jointIdx = 0; jointIdx < this._pairs.length; jointIdx++) {
+        //         let pair = this._pairs[jointIdx];
+        //         let matrixOrArray = pair.values[frame];
+        //         let data = matrixOrArray.m? matrixOrArray.m: matrixOrArray;
+        //         for(let i = 0; i < 16; i++) {
+        //             data[i]
+        //             buffer
+        //         }
+        //     }
+        //     // this._jointsFloat32Data.set(matrix.m, 16 * iMatrix);
+        // }
+    }
+
+    private float2byte(value: number) {
+        for(let i = 0; i < 256; i++) {
+            
         }
     }
 
@@ -42,6 +83,48 @@ export default class BakedSkeletonAnimation extends cc.Component {
     }
 
     //================================================ 
+    private sample(ratio) {
+        let ratios = this._ratios;
+        let index = this.quickFindIndex(ratios, ratio);
+        if (index < -1) {
+            index = ~index - 1;
+        }
+
+        let pairs = this._pairs;
+        for (let i = 0; i < pairs.length; i++) {
+            let pair = pairs[i];
+            pair.target._jointMatrix = pair.values[index];
+        }
+    }
+
+    private quickFindIndex(ratios, ratio) {
+        var length = ratios.length - 1;
+    
+        if (length === 0) return 0;
+    
+        var start = ratios[0];
+        if (ratio < start) return 0;
+    
+        var end = ratios[length];
+        if (ratio > end) return ~ratios.length;
+    
+        ratio = (ratio - start) / (end - start);
+    
+        var eachLength = 1 / length;
+        var index = ratio / eachLength;
+        var floorIndex = index | 0;
+        var EPSILON = 1e-6;
+    
+        if ((index - floorIndex) < EPSILON) {
+            return floorIndex;
+        }
+        else if ((floorIndex + 1 - index) < EPSILON) {
+            return floorIndex + 1;
+        }
+    
+        return ~(floorIndex + 1);
+    }
+
     private extendCurve(): void {
         let ratios = this._ratios;
         let pairs = this._pairs;
@@ -94,47 +177,5 @@ export default class BakedSkeletonAnimation extends cc.Component {
             this._ratios = newRatios;
             pair.values = newValues;
         }
-    }
-
-    private sample(ratio) {
-        let ratios = this._ratios;
-        let index = this.quickFindIndex(ratios, ratio);
-        if (index < -1) {
-            index = ~index - 1;
-        }
-
-        let pairs = this._pairs;
-        for (let i = 0; i < pairs.length; i++) {
-            let pair = pairs[i];
-            pair.target._jointMatrix = pair.values[index];
-        }
-    }
-
-    private quickFindIndex(ratios, ratio) {
-        var length = ratios.length - 1;
-    
-        if (length === 0) return 0;
-    
-        var start = ratios[0];
-        if (ratio < start) return 0;
-    
-        var end = ratios[length];
-        if (ratio > end) return ~ratios.length;
-    
-        ratio = (ratio - start) / (end - start);
-    
-        var eachLength = 1 / length;
-        var index = ratio / eachLength;
-        var floorIndex = index | 0;
-        var EPSILON = 1e-6;
-    
-        if ((index - floorIndex) < EPSILON) {
-            return floorIndex;
-        }
-        else if ((floorIndex + 1 - index) < EPSILON) {
-            return floorIndex + 1;
-        }
-    
-        return ~(floorIndex + 1);
     }
 }

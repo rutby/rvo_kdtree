@@ -1,0 +1,20 @@
+{
+  "__type__": "cc.Material",
+  "_name": "BakedAnimationNoSkin",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "22642122-bf04-48ec-b2a1-34a6c603e86e"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {},
+      "props": {
+        "diffuseTexture": {
+          "__uuid__": "0e9df65b-8934-4081-bc7d-52410ea5a8fd"
+        }
+      }
+    }
+  }
+}
