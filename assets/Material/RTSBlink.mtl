@@ -1,0 +1,20 @@
+{
+  "__type__": "cc.Material",
+  "_name": "RTSBlink",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "9080e881-5790-4c24-a5ce-db93a0a5e39b"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {},
+      "props": {
+        "diffuseTexture0": {
+          "__uuid__": "a34c56fc-34a1-4c65-9e25-e8a8d92f23f1"
+        }
+      }
+    }
+  }
+}
