@@ -9,7 +9,6 @@
     ]
   ],
   "excluded-modules": [
-    "Physics",
     "3D Physics/cannon.js",
     "3D Physics/Builtin"
   ],

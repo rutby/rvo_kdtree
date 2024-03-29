@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.Material",
+  "_name": "RectMat - 001",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "6d91e591-4ce0-465c-809f-610ec95019c6"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {
+        "USE_DIFFUSE_TEXTURE": true
+      },
+      "props": {
+        "diffuseTexture": {
+          "__uuid__": "24d29010-1cf1-40bc-a9aa-97bde0f4db39"
+        }
+      }
+    }
+  }
+}
