@@ -239,21 +239,27 @@ export class PrimitiveUtils {
     }
 
     public static poly2(polys: cc.Vec2[]) {
-        // let meshPolys = this._smoothPoly(polys, roundness, 2);
-        // let polyLen = polys.length;
+        // let meshPolys = this._smoothPoly(polys, 0.02, 1);
+        // let polyLen = meshPolys.length;
+
+        // /** 顶点 */
+        // let corners: cc.Vec3[] = [];
+        // for(let meshPoly of meshPolys) {
+        //     corners.push(cc.v3(meshPoly.vert.x, meshPoly.vert.y));
+        // }
 
         /** 顶点 */
         let corners: cc.Vec3[] = [];
         for(let poly of polys) {
             corners.push(cc.v3(poly.x, poly.y));
         }
-
+        let polyLen = polys.length;
 
         /** 面 */
         let planes: MeshPlane[] = [
             new MeshPlane(),
         ];
-        for(let i = 0; i < polys.length; i++) {
+        for(let i = 0; i < polyLen; i++) {
             planes[0].verts.push(i);
             planes[0].order.push(i);
             planes[0].normals.push(cc.v3(0, 0, 1));
@@ -291,6 +297,26 @@ export class PrimitiveUtils {
             uvs           : uvs,
             indices       : indices,
         };
+    }
+
+    public static newMesh(indices, verts, uv, normals): cc.Mesh {
+        let gfx = cc.gfx;
+        let mesh = new cc.Mesh();
+
+        var vfmtMesh = new gfx.VertexFormat([
+            { name: gfx.ATTR_POSITION, type: gfx.ATTR_TYPE_FLOAT32, num: 3 },
+            { name: gfx.ATTR_UV0, type: gfx.ATTR_TYPE_FLOAT32, num: 2 },
+            { name: gfx.ATTR_NORMAL, type: gfx.ATTR_TYPE_FLOAT32, num: 3 },
+        ]);
+        vfmtMesh.name = 'vfmtPosUvNormal';
+
+		mesh.init(vfmtMesh, verts.length);
+        mesh.setIndices(indices, 0);
+		mesh.setVertices(gfx.ATTR_POSITION, verts);
+        mesh.setVertices(gfx.ATTR_UV0, uv);
+        mesh.setVertices(gfx.ATTR_NORMAL, normals);
+		mesh.setPrimitiveType(gfx.PT_TRIANGLES, 0);
+        return mesh;
     }
 
     //================================================ utils
