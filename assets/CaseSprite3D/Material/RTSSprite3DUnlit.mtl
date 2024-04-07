@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "Color",
+  "_name": "RTSSprite3DUnlit",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -9,16 +9,9 @@
   "_techniqueIndex": 1,
   "_techniqueData": {
     "0": {
-      "props": {
-        "diffuseColor": {
-          "__type__": "cc.Color",
-          "r": 255,
-          "g": 0,
-          "b": 0,
-          "a": 255
-        }
-      },
-      "defines": {}
+      "defines": {
+        "USE_DIFFUSE_TEXTURE": true
+      }
     }
   }
 }

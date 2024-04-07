@@ -6,6 +6,11 @@
     [
       false,
       false
+    ],
+    [
+      false,
+      false,
+      false
     ]
   ],
   "excluded-modules": [
@@ -14,7 +19,8 @@
   ],
   "group-list": [
     "default",
-    "ui"
+    "ui",
+    "projectile"
   ],
   "design-resolution-width": 960,
   "design-resolution-height": 640,

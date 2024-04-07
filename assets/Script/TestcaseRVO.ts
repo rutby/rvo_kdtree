@@ -1,3 +1,4 @@
+import KeyboardListener from "./Components/KeyboardListener";
 import { RVOMath, Vector2 } from "./RVO/common";
 import { Simulator } from "./RVO/simulator";
 
@@ -20,6 +21,7 @@ export default class TestcaseRVO extends cc.Component {
     private _agents_d: IAgent[] = [];
     private _agents_n: cc.Node[] = [];
     protected start(): void {
+        !CC_BUILD && this.addComponent(KeyboardListener);
         this.nodeAgent.setContentSize(cc.size(this.radius, this.radius));
 
         /** touch */
