@@ -1,5 +1,15 @@
 {
-  "excludeScenes": [],
+  "excludeScenes": [
+    "cc3ec5cb-577c-4332-91ec-8bb7159a53ba",
+    "01743db4-51b3-4c59-ba62-8392b04fb78b",
+    "aa7aeea8-a59a-4c40-bf41-c8137731d7f4",
+    "129fc858-3dc4-4a85-8177-2f13a8db1f26",
+    "2d2f792f-a40c-49bb-a189-ed176a246e49",
+    "16bbff99-4ab1-4a33-a6d2-47407a1952a3",
+    "e32dc16b-fe04-423f-a581-fc84ab922bbb",
+    "54549cdd-5ae3-46a7-851d-770f095751cd",
+    "5afa19d3-0c9b-4361-82a0-07d1e3ba66e8"
+  ],
   "orientation": {
     "landscapeLeft": true,
     "landscapeRight": true,
@@ -7,7 +17,7 @@
     "upsideDown": false
   },
   "packageName": "org.cocos2d.helloworld",
-  "startScene": "129fc858-3dc4-4a85-8177-2f13a8db1f26",
+  "startScene": "11d1a492-1817-4df8-9bf4-e4e02ba70917",
   "title": "hello_world",
   "webOrientation": "auto",
   "inlineSpriteFrames": true,

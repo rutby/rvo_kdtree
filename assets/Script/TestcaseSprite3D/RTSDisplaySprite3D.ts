@@ -11,29 +11,23 @@ export default class RTSDisplaySprite3D extends cc.Component {
 
 	private _texturePrev: cc.Texture2D = null;
 	protected update(dt: number): void {
-		// if (CC_EDITOR && this.spSource && this.spSource.spriteFrame.getTexture() !== this._texturePrev) {
-		// 	this._texturePrev = this.spSource.spriteFrame.getTexture();
-		// 	this.generate();
-		// }
+		if (CC_EDITOR && this.spSource && this.spSource.spriteFrame.getTexture() !== this._texturePrev) {
+			this._texturePrev = this.spSource.spriteFrame.getTexture();
+			this.generate();
+		}
 	}
 
 	protected onLoad(): void {
 		this.generate();
 	}
 
-	//================================================ publicaaawfadad
-	public changeSpriteFrame(path: string): void {
-		// UIUtils.setSpriteFrame(path, this.spSource, () => {
-		// 	this.generate();
-		// });
-	}
-
 	//================================================ private
 	private generate(): void {
-		let texture = this.spSource.spriteFrame.getTexture();
+		let sf = this.spSource.spriteFrame;
+		let texture = sf.getTexture();
 
-		let w = texture.width / 100;
-		let h = texture.height / 100;
+		let w = this.spSource.node.width / 100;
+		let h = this.spSource.node.height / 100;
 		let shape: cc.Vec2[] = [
 			cc.v2(-w / 2, -h / 2),
 			cc.v2(+w / 2, -h / 2),
@@ -42,10 +36,10 @@ export default class RTSDisplaySprite3D extends cc.Component {
 		];
 		let model = PrimitiveUtils.poly2(shape);
 		model.uvs = [
-			0, 1, 
-			1, 1,
-			1, 0,
-			0, 0,
+			sf.uv[0], sf.uv[1],
+			sf.uv[2], sf.uv[3],
+			sf.uv[6], sf.uv[7],
+			sf.uv[4], sf.uv[5],
 		];
 		let meshRenderer = this.getComponent(cc.MeshRenderer);
 		meshRenderer.mesh = PrimitiveUtils.newMesh(model.indices, model.positions, model.uvs, model.normals);
