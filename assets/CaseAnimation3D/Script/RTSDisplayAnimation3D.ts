@@ -1,4 +1,4 @@
-import { PrimitiveUtils } from "../../../Script/TestcaseShadow/Utils/PrimitiveUtils";
+import { PrimitiveUtils } from "../../Script/TestcaseShadow/Utils/PrimitiveUtils";
 
 const { ccclass, property, requireComponent } = cc._decorator;
 @ccclass

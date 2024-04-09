@@ -1,4 +1,4 @@
-import KeyboardListener from "../../../Script/Components/KeyboardListener";
+import KeyboardListener from "../../Script/Components/KeyboardListener";
 
 const {ccclass, property, menu} = cc._decorator;
 
