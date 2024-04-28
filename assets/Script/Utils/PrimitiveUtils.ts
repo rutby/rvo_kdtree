@@ -319,6 +319,24 @@ export class PrimitiveUtils {
         return mesh;
     }
 
+	public static newMeshPosUv(indices, verts, uv): cc.Mesh {
+        let gfx = cc.gfx;
+        let mesh = new cc.Mesh();
+
+        var vfmtMesh = new gfx.VertexFormat([
+            { name: gfx.ATTR_POSITION, type: gfx.ATTR_TYPE_FLOAT32, num: 3 },
+            { name: gfx.ATTR_UV0, type: gfx.ATTR_TYPE_FLOAT32, num: 2 },
+        ]);
+        vfmtMesh.name = 'vfmtPosUv';
+
+		mesh.init(vfmtMesh, verts.length/3);
+        mesh.setIndices(indices, 0);
+		mesh.setVertices(gfx.ATTR_POSITION, verts);
+        mesh.setVertices(gfx.ATTR_UV0, uv);
+		mesh.setPrimitiveType(gfx.PT_TRIANGLES, 0);
+        return mesh;
+    }
+
     //================================================ utils
     private static _smoothPoly(polys: cc.Vec2[], roundness: number, count: number): MeshPoly[] {
         let verts: MeshPoly[] = [];
