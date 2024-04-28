@@ -75,16 +75,16 @@
         "__id__": 5
       },
       {
-        "__id__": 33
+        "__id__": 38
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 36
+        "__id__": 41
       },
       {
-        "__id__": 37
+        "__id__": 42
       }
     ],
     "_prefab": null,
@@ -235,6 +235,9 @@
       },
       {
         "__id__": 27
+      },
+      {
+        "__id__": 32
       }
     ],
     "_active": true,
@@ -997,7 +1000,7 @@
         "__id__": 22
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [],
     "_prefab": null,
     "_opacity": 255,
@@ -1247,7 +1250,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "node_area_sector",
+    "_name": "RTSDisplaySprite3D copy",
     "_objFlags": 0,
     "_parent": {
       "__id__": 5
@@ -1258,6 +1261,204 @@
       }
     ],
     "_active": true,
+    "_components": [
+      {
+        "__id__": 30
+      },
+      {
+        "__id__": 31
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0.5,
+        -5,
+        -0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476,
+        1,
+        1,
+        1
+      ]
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": -90,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": true,
+    "_groupIndex": 2,
+    "groupIndex": 2,
+    "_id": "02RWIFl+pH+4IMLwg7BKTV"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "New Sprite",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 27
+    },
+    "_children": [],
+    "_active": false,
+    "_components": [
+      {
+        "__id__": 29
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 242,
+      "height": 242
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": true,
+    "_groupIndex": 2,
+    "groupIndex": 2,
+    "_id": "8cPjRJ2SNHKZsjeHsAyQ9l"
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 28
+    },
+    "_enabled": true,
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "flipX": false,
+    "_spriteFrame": {
+      "__uuid__": "c7f7c2b2-16a4-4f42-9480-210272133fa3"
+    },
+    "_type": 3,
+    "_sizeMode": 1,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0.125,
+    "_isTrimmedMode": true,
+    "_state": 0,
+    "_atlas": null,
+    "_id": "e3jvO8XHxH5KANMxfVgDhb"
+  },
+  {
+    "__type__": "cc.MeshRenderer",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 27
+    },
+    "_enabled": true,
+    "_materials": [
+      {
+        "__uuid__": "b541fdba-cf2d-4f09-81bd-d3b6bd0befbd"
+      }
+    ],
+    "_mesh": null,
+    "_receiveShadows": false,
+    "_shadowCastingMode": 0,
+    "_enableAutoBatch": false,
+    "textures": [],
+    "_id": "38nPMMzrJDw5DsbhPEUFgY"
+  },
+  {
+    "__type__": "6ed96kWuMtO84lc9yhXBLQL",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 27
+    },
+    "_enabled": true,
+    "spSource": {
+      "__id__": 29
+    },
+    "_id": "86SUADe2NHb68Q8kfP6JFo"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "node_area_sector",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 5
+    },
+    "_children": [
+      {
+        "__id__": 33
+      }
+    ],
+    "_active": false,
     "_components": [],
     "_prefab": null,
     "_opacity": 255,
@@ -1312,20 +1513,20 @@
     "_name": "RTSDisplaySprite3D",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 27
+      "__id__": 32
     },
     "_children": [
       {
-        "__id__": 29
+        "__id__": 34
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 31
+        "__id__": 36
       },
       {
-        "__id__": 32
+        "__id__": 37
       }
     ],
     "_prefab": null,
@@ -1381,13 +1582,13 @@
     "_name": "New Sprite",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 28
+      "__id__": 33
     },
     "_children": [],
     "_active": false,
     "_components": [
       {
-        "__id__": 30
+        "__id__": 35
       }
     ],
     "_prefab": null,
@@ -1443,7 +1644,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 29
+      "__id__": 34
     },
     "_enabled": true,
     "_materials": [
@@ -1477,7 +1678,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 28
+      "__id__": 33
     },
     "_enabled": true,
     "_materials": [
@@ -1497,11 +1698,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 28
+      "__id__": 33
     },
     "_enabled": true,
     "spSource": {
-      "__id__": 30
+      "__id__": 35
     },
     "_id": "f48Wu9+apDnbuqyX5xB+/o"
   },
@@ -1514,7 +1715,7 @@
     },
     "_children": [
       {
-        "__id__": 34
+        "__id__": 39
       }
     ],
     "_active": true,
@@ -1572,13 +1773,13 @@
     "_name": "New 2D Camera",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 33
+      "__id__": 38
     },
     "_children": [],
     "_active": false,
     "_components": [
       {
-        "__id__": 35
+        "__id__": 40
       }
     ],
     "_prefab": null,
@@ -1634,7 +1835,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 34
+      "__id__": 39
     },
     "_enabled": true,
     "_cullingMask": 4294967295,

@@ -12,7 +12,7 @@ CCEffect %{
       blendState:
         targets:
         - blend: true
-          blendSrc: one
+          blendSrc: src_alpha
           blendDst: one
       rasterizerState:
         cullMode: none

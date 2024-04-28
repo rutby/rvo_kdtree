@@ -42,8 +42,8 @@ CCProgram vs %{
 
         v_uv0 = In.uv * mainTiling + mainOffset;
 
-        gl_Position = cc_matViewProj * cc_matWorld * In.position;
-		// gl_Position = cc_matViewProj *  In.position;
+        // gl_Position = cc_matViewProj * cc_matWorld * In.position;
+		gl_Position = cc_matViewProj *  In.position;
     }
 }%
 
