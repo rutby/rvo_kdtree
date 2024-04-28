@@ -1,8 +1,5 @@
 {
-  "assets/resources/CaseAnimation3D/Texture/AutoAtlas/AutoAtlas.pac": [
-    "build/wechatgame/assets/resources/native/1a/1a19a8e35.f38da.png"
-  ],
-  "assets/resources/CaseAnimation3D/Texture/PreAtlas/pack.png": [
-    "build/wechatgame/assets/resources/native/bd/bd1cd6c6-60b2-4bf5-aa34-a23a3dcfd46f.a5a59.png"
+  "assets/CaseSprite3D/Texture/army0.plist": [
+    "build/wechatgame/assets/main/native/3c/3c301d6c-5178-4040-b4e0-b1efe33d3039.fd752.png"
   ]
 }

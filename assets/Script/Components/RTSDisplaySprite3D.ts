@@ -14,10 +14,13 @@ export default class RTSDisplaySprite3D extends cc.Component {
 	@property(cc.Boolean) public enableAutoBatch: boolean = false;
 	@property({ type: cc.Enum(RTSSprite3DBatchType), visible: function (): boolean { return this.enableAutoBatch; } }) public batchType: number = RTSSprite3DBatchType.Army;
 
+	private _idx: number = -1;
 	private _meshRenderer: cc.MeshRenderer = null;
 	protected onLoad(): void {
 		this._meshRenderer = this.getComponent(cc.MeshRenderer);
 		this._spriteFrame = null;
+
+		this._idx = RTSSprite3DBatcher.getInstance<RTSSprite3DBatcher>().getIdx();
 	}
 
 	private _spriteFrame: cc.SpriteFrame = null;
@@ -26,7 +29,7 @@ export default class RTSDisplaySprite3D extends cc.Component {
 			return;
 		}
 
-		if (this._spriteFrame != this.spriteFrame || CC_EDITOR) {
+		if (this._spriteFrame != this.spriteFrame || CC_EDITOR || this.enableAutoBatch) {
 			this._spriteFrame = this.spriteFrame;
 			this.generate();
 		}
@@ -106,32 +109,26 @@ export default class RTSDisplaySprite3D extends cc.Component {
 				this._texture = texture;
 				this._meshRenderer.getMaterials()[0].setProperty('diffuseTexture', texture);
 			}
+
+			RTSSprite3DBatcher.getInstance<RTSSprite3DBatcher>().rmItem(this.batchType, this._idx);
 		} else {
 			if (this._meshRenderer.mesh) {
 				this._meshRenderer.mesh = null;
 			}
 
-			// this.node.getWorldMatrix(this._mat4);
-			// let local = this._model.positions;
-			// for (let offset = 0; offset < 4; offset++) {
-			// 	cc.Vec3.set(this._vec3, local[offset], local[offset + 1], local[offset + 2])
-			// 	cc.Vec3.transformMat4(this._vec3, this._vec3, this._mat4);
-			// }
-
+			/** 无矩阵变换 */
 			this._model._positions = this._model.positions;
-			
 			let positions = [];
-			// let posWorld = this.node.parent.convertToWorldSpaceAR(this.node.position);
 			let posWorld = this.node.position;
 			let local = this._model._positions;
 			for (let i = 0; i < this._model._positions.length; i+=3) {
-				positions.push(local[i] + posWorld.x);
-				positions.push(-0.01);
-				positions.push(local[i+1] - posWorld.z);
+				positions.push((local[i] * this.node.scaleX + posWorld.x));
+				positions.push((-posWorld.z));
+				positions.push(local[i+1] * this.node.scaleY + posWorld.y);
 			}
 			this._model.positions = positions;
 			
-			RTSSprite3DBatcher.getInstance<RTSSprite3DBatcher>().addItem(this.batchType, this.node.uuid, this._model);
+			RTSSprite3DBatcher.getInstance<RTSSprite3DBatcher>().addItem(this.batchType, this._idx, this._model);
 		}
 	}
 

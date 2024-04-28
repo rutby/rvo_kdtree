@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "RTSSprite3DUnlit",
+  "_name": "RTSSprite3DBatcherArmy",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -11,6 +11,11 @@
     "0": {
       "defines": {
         "USE_DIFFUSE_TEXTURE": true
+      },
+      "props": {
+        "diffuseTexture": {
+          "__uuid__": "3c301d6c-5178-4040-b4e0-b1efe33d3039"
+        }
       }
     }
   }

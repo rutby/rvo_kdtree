@@ -24,16 +24,16 @@ export enum RTSSprite3DBatchType {
 export default class RTSSprite3DBatcher extends RTSSingleton {
 	private _pool: any = {};
 
-	public addItem(type: RTSSprite3DBatchType, uuid: string, model: any) {
+	public addItem(type: RTSSprite3DBatchType, idx: number, model: any) {
 		this._pool[type] = this._pool[type] || {};
-		this._pool[type][uuid] = model;
-		console.log('[RTSSprite3DBatcher] ========', 'addItem', type, uuid);
+		this._pool[type][idx] = model;
+		// console.log('[RTSSprite3DBatcher] ========', 'addItem', type, idx);
 	}
 
-	public rmItem(type: RTSSprite3DBatchType, uuid: string) {
+	public rmItem(type: RTSSprite3DBatchType, idx: number) {
 		this._pool[type] = this._pool[type] || {};
-		delete this._pool[type][uuid];
-		console.log('[RTSSprite3DBatcher] ========', 'rmItem', type, uuid);
+		delete this._pool[type][idx];
+		// console.log('[RTSSprite3DBatcher] ========', 'rmItem', type, idx);
 	}
 
 	public items(type: RTSSprite3DBatchType): any {
@@ -42,5 +42,10 @@ export default class RTSSprite3DBatcher extends RTSSingleton {
 
 	public clear(): void {
 		this._pool = {};
+	}
+
+	private _idx: number = 0;
+	public getIdx(): number {
+		return this._idx++;
 	}
 }
