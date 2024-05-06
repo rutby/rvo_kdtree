@@ -18,20 +18,20 @@ export default class TestcaseSprite3D extends cc.Component {
 
 		/** 创建200个单位 */
 		this.nodeArmyContainer.destroyAllChildren();
-		let col = 25;
-		let row = 25;
-		for (let i = 0; i < col; i++) {
-			let x = -250 + 500 / col * i;
-			for (let j = row - 1; j >= 0 ; j--) {
-			// for (let j = 0; j < row; j++) {
-				let y = 0 - 1000 / row * j;
-				let node = cc.instantiate(this.nodeArmy);
-				node.parent = this.nodeArmyContainer;
-				node.x = x / 100;
-				node.z = y / 100;
-				node.active = true;
-			}
-		}
+		// let col = 25;
+		// let row = 25;
+		// for (let i = 0; i < col; i++) {
+		// 	let x = -250 + 500 / col * i;
+		// 	for (let j = row - 1; j >= 0 ; j--) {
+		// 	// for (let j = 0; j < row; j++) {
+		// 		let y = 0 - 1000 / row * j;
+		// 		let node = cc.instantiate(this.nodeArmy);
+		// 		node.parent = this.nodeArmyContainer;
+		// 		node.x = x / 100;
+		// 		node.z = y / 100;
+		// 		node.active = true;
+		// 	}
+		// }
 
 		cc.debug.setDisplayStats(true);
     }

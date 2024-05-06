@@ -36,18 +36,13 @@ export default class RTSDisplaySprite3D extends cc.Component {
 	}
 
 	protected onDisable(): void {
-		if (this.enableAutoBatch) {
-			RTSSprite3DBatcher.getInstance<RTSSprite3DBatcher>().rmItem(this.batchType, this.node.uuid);
-			this._spriteFrame = null;
-		}
+		RTSSprite3DBatcher.getInstance<RTSSprite3DBatcher>().rmItem(this.batchType, this._idx);
 	}
 
 	//================================================ private
 	private _verts: number[] = [];
 	private _texture: cc.Texture2D = null;
 	private _model: any = null;
-	private _mat4: cc.Mat4 = cc.mat4();
-	private _vec3: cc.Vec3 = cc.v3();
 	private generate(): void {
 		let sf = this.spriteFrame;
 		let texture = sf.getTexture();
@@ -121,11 +116,35 @@ export default class RTSDisplaySprite3D extends cc.Component {
 			let positions = [];
 			let posWorld = this.node.position;
 			let local = this._model._positions;
-			for (let i = 0; i < this._model._positions.length; i+=3) {
-				positions.push((local[i] * this.node.scaleX + posWorld.x));
-				positions.push((-posWorld.z));
-				positions.push(local[i+1] * this.node.scaleY + posWorld.y);
+			switch(this.batchType) {
+				case RTSSprite3DBatchType.Army: {
+					/** 小兵垂直于地面 */
+					for (let i = 0; i < this._model._positions.length; i+=3) {
+						positions.push((local[i] * this.node.scaleX + posWorld.x));
+						positions.push((-posWorld.z));
+						positions.push(local[i+1] * this.node.scaleY + posWorld.y);
+					}
+					break;
+				}
+				case RTSSprite3DBatchType.Projectile: {
+					/** 子弹平行于地面 & 有旋转 */
+					let radians = this.node.eulerAngles.y * Math.PI / 180;
+					let sin = Math.sin(radians);
+					let cos = Math.cos(radians);
+
+					for (let i = 0; i < this._model._positions.length; i+=3) {
+						let x = local[i];
+						let y = local[i+1];
+						let fx = cos * x - sin * y;
+						let fy = sin * x + cos * y;
+						positions.push((fx * this.node.scaleX + posWorld.x));
+						positions.push(-posWorld.y);
+						positions.push((fy * this.node.scaleY - posWorld.z));
+					}
+					break;
+				}
 			}
+			
 			this._model.positions = positions;
 			
 			RTSSprite3DBatcher.getInstance<RTSSprite3DBatcher>().addItem(this.batchType, this._idx, this._model);
